@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breast Cancer Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        form {
+            display: inline-block;
+            text-align: left;
+            background: #f4f4f4;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px #ccc;
+        }
+        input {
+            margin-bottom: 10px;
+            padding: 8px;
+            width: 100%;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Breast Cancer Prediction</h1>
+    <p>Enter the required data below:</p>
+
+    <form action="/predict" method="post">
+        <label for="feature1">Feature 1:</label>
+        <input type="text" name="feature1" required>
+
+        <label for="feature2">Feature 2:</label>
+        <input type="text" name="feature2" required>
+
+        <label for="feature3">Feature 3:</label>
+        <input type="text" name="feature3" required>
+
+        <label for="feature4">Feature 4:</label>
+        <input type="text" name="feature4" required>
+
+        <label for="feature5">Feature 5:</label>
+        <input type="text" name="feature5" required>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    <h2>{{ prediction_text }}</h2>
+
+</body>
+</html>
